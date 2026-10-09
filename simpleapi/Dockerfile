@@ -1,9 +1,7 @@
 # Build stage
-FROM eclipse-temurin:25-jdk-alpine AS myapp-build
+FROM maven:3.9-eclipse-temurin-25 AS myapp-build
 ENV MYAPP_HOME=/opt/myapp
 WORKDIR $MYAPP_HOME
-
-RUN apk add --no-cache maven
 
 COPY pom.xml .
 COPY src ./src
