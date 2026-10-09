@@ -1,0 +1,10 @@
+- name: Run front
+  community.docker.docker_container:
+    name: front
+    image: slifos/tp-docker-front
+    pull: true
+    restart_policy: always
+    networks:
+      - name: app-network
+  vars:
+    ansible_python_interpreter: /opt/docker_venv/bin/python
