@@ -4,7 +4,7 @@
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>3.4.2</version>
+		<version>3.5.7</version>
 		<relativePath /> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>fr.takima.training</groupId>
@@ -14,9 +14,9 @@
 	<description>Simple API demo project for Spring Boot</description>
 
 	<properties>
-		<java.version>21</java.version>
-		<jacoco-maven-plugin.version>0.8.12</jacoco-maven-plugin.version>
-		<testcontainers.version>1.20.4</testcontainers.version>
+		<java.version>25</java.version>
+		<jacoco-maven-plugin.version>0.8.14</jacoco-maven-plugin.version>
+		<testcontainers.version>1.21.4</testcontainers.version>
 		<validation.version>3.1.0</validation.version>
 	</properties>
 
@@ -65,6 +65,7 @@
 		<dependency>
 			<groupId>org.postgresql</groupId>
 			<artifactId>postgresql</artifactId>
+			<version>42.7.12</version>
 			<scope>runtime</scope>
 		</dependency>
 		<dependency>

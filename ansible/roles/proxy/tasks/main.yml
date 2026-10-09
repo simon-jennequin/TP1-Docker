@@ -1,0 +1,12 @@
+- name: Run proxy
+  community.docker.docker_container:
+    name: httpd
+    image: slifos/tp-docker-httpd
+    pull: true
+    restart_policy: always
+    networks:
+      - name: app-network
+    ports:
+      - "80:80"
+  vars:
+    ansible_python_interpreter: /opt/docker_venv/bin/python

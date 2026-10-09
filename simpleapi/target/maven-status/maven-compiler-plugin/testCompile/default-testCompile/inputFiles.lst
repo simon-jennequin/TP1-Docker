@@ -1,0 +1,4 @@
+/app/src/test/java/fr/takima/training/sampleapplication/IT/DepartmentControllerTestIT.java
+/app/src/test/java/fr/takima/training/sampleapplication/IT/StudentControllerTestIT.java
+/app/src/test/java/fr/takima/training/sampleapplication/unit/DepartmentsServiceTest.java
+/app/src/test/java/fr/takima/training/sampleapplication/unit/StudentsServiceTest.java
