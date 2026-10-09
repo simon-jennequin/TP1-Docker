@@ -7,6 +7,9 @@ on:
       - develop
   pull_request:
 
+env:
+  DOCKERHUB_USERNAME: slifos
+
 jobs:
   test-backend:
     runs-on: ubuntu-24.04
@@ -36,28 +39,28 @@ jobs:
         if: github.ref == 'refs/heads/main'
         uses: docker/login-action@v3
         with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
+          username: ${{ env.DOCKERHUB_USERNAME }}
           password: ${{ secrets.DOCKERHUB_TOKEN }}
 
       - name: Build and push backend image
         uses: docker/build-push-action@v6
         with:
           context: ./simpleapi
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-docker-simpleapi:latest
+          tags: ${{ env.DOCKERHUB_USERNAME }}/tp-docker-simpleapi:latest
           push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build and push database image
         uses: docker/build-push-action@v6
         with:
           context: ./database
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-docker-database:latest
+          tags: ${{ env.DOCKERHUB_USERNAME }}/tp-docker-database:latest
           push: ${{ github.ref == 'refs/heads/main' }}
 
       - name: Build and push httpd image
         uses: docker/build-push-action@v6
         with:
           context: ./http-server
-          tags: ${{ secrets.DOCKERHUB_USERNAME }}/tp-docker-httpd:latest
+          tags: ${{ env.DOCKERHUB_USERNAME }}/tp-docker-httpd:latest
           push: ${{ github.ref == 'refs/heads/main' }}
 
   deploy:
