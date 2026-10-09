@@ -1,0 +1,10 @@
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\controller\DepartmentController.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\controller\GreetingController.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\controller\StudentController.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\dao\DepartmentDAO.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\dao\StudentDAO.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\entity\Department.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\entity\Student.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\service\DepartmentService.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\service\StudentService.java
+C:\github\TP1-Docker\simpleapi\src\main\java\fr\takima\training\simpleapi\SimpleApiApplication.java
