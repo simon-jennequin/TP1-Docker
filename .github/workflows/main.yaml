@@ -63,6 +63,13 @@ jobs:
           tags: ${{ env.DOCKERHUB_USERNAME }}/tp-docker-httpd:latest
           push: ${{ github.ref == 'refs/heads/main' }}
 
+      - name: Build and push front image
+        uses: docker/build-push-action@v6
+        with:
+          context: ./front
+          tags: ${{ env.DOCKERHUB_USERNAME }}/tp-docker-front:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
+
   deploy:
     needs: build-and-push-docker-image
     runs-on: ubuntu-24.04
@@ -91,3 +98,9 @@ jobs:
       - name: Deploy with Ansible
         working-directory: ansible
         run: ansible-playbook -i inventories/setup.yml playbook.yml
+      - name: Build image and push front
+        uses: docker/build-push-action@v6
+        with:
+          context: ./front
+          tags: ${{secrets.DOCKERHUB_USERNAME}}/tp-docker-front:latest
+          push: ${{ github.ref == 'refs/heads/main' }}
